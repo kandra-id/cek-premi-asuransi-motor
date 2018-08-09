@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Script Menyimpan Nilai Kendaraan Yang Diinput User</title>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Script Menyimpan Nilai Kendaraan Yang Diinput User</h1>
+
+<form id="form1">
+<label>Harga Kendaraan</label>
+<input type='number' name='harga-kendaraan' id='harga-kendaraan'>
+<label>Kode Plat</label>
+<select name='kode-plat' id="list-nopol">
+<option value='bl'>BL</option>
+<option value='bb'>BB</option>
+<option value='bk'>BK</option>
+<option value='ba'>BA</option>
+<option value='bm'>BM</option>
+<option value='bh'>BH</option>
+<option value='bd'>BD</option>
+<option value='bp'>BP</option>
+<option value='bg'>BG</option>
+<option value='bn'>BN</option>
+<option value='be'>BE</option>
+<option value='a'>A</option>
+<option value='b'>B</option>
+<option value='d'>D</option>
+<option value='e'>E</option>
+<option value='f'>F</option>
+<option value='t'>T</option>
+<option value='z'>Z</option>
+<option value='g'>G</option>
+<option value='h'>H</option>
+<option value='k'>K</option>
+<option value='r'>R</option>
+<option value='aa'>AA</option>
+<option value='ab'>AB</option>
+<option value='ad'>AD</option>
+<option value='l'>L</option>
+<option value='m'>M</option>
+<option value='n'>N</option>
+<option value='p'>P</option>
+<option value='s'>S</option>
+<option value='w'>W</option>
+<option value='ae'>AE</option>
+<option value='ag'>AG</option>
+<option value='dk'>DK</option>
+<option value='dr'>DR</option>
+<option value='dl'>DL</option>
+<option value='dm'>DM</option>
+<option value='dn'>DN</option>
+<option value='dt'>DT</option>
+<option value='dd'>DD</option>
+<option value='dc'>DC</option>
+<option value='de'>DE</option>
+<option value='dg'>DG</option>
+<option value='ds'>DS</option>
+</select>
+<!--<input type='date' id='sdate' value='sdate'>
+<input type='date' id='edate' value='edate'>-->
+
+</form>
+<button onclick="myFunction()">tampilkan</button>
+
+<script>
+function myFunction(){
+const x = document.getElementById("form1");
+y = x.elements["harga-kendaraan"].value;
+z = document.getElementById("list-nopol").value;
+document.getElementById("tsi").innerHTML = "Harga Kendaraan" + " " + y.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+document.getElementById("kode-wilayah").innerHTML = "Kode Wilayah" + " " + z;
+
+}
+</script>
+<p id="tsi"></p>
+<p id="kode-wilayah"></p>
+</body>
+</html>
